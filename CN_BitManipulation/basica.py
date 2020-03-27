@@ -1,0 +1,11 @@
+def Opearator(a,b):
+    print("Add")
+    print(a & b)
+    print("Or")
+    print(a | b)
+    print("NOT ")
+    print( ~ b )
+    print("XOR")
+    print(a ^ b)
+    print( ~0 )
+Opearator(2,3)

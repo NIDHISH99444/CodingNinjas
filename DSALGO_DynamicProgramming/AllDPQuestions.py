@@ -36,6 +36,7 @@ def maximumSubsequenceConsecutive(arr):
 
 def maximumSqaureMatrix(matrix):
     newMatrix=[[0 for i in range(len(matrix[0]))]for j in range(len(matrix))]
+
     for i in range(len(matrix)):
         newMatrix[i][0]=matrix[i][0]
     for j in range(len(matrix[0])):

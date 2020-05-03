@@ -13,9 +13,6 @@ def dfs(edge,n,visited,sv):
             else:
                 dfs(edges,n,visited,i)
 
-
-
-
 n=4
 edges=[[0 for i in range(n)]for j in range(n)]
 visited=[False]*n

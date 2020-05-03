@@ -1,0 +1,4 @@
+shell.open
+memdevice:0.InitFile
+shell.SetLogFile
+nvmedrive:0.SetImage

@@ -1,0 +1,16 @@
+@shell.open C:\Jenkins\sqa-jenkins\workspace\
+@regsmgr.AddForce 19h_GN_A0/UMC0_CH0/UmcCfgEco/UmcCfgEco 0x007e8000
+@regsmgr.AddForce 19h_GN_A0/PIE0_D18F6/ScratchRegister[30]/ScratchBits 0xC0170821
+@memdevice:0.InitFile None
+@shell.SetLogFile C:\Jenkins\sqa-jenkins\workspace\MilanEthanolxMasterCi\Simnow_OS_Boot\python\Simnow\port80h_snoop.log
+@shell.SetErrorLogFile C:\Jenkins\sqa-jenkins\workspace\MilanEthanolxMasterCi\Simnow_OS_Boot\python\Simnow\port80h_snoop.log
+@nvmedrive.SetImage D:\SIMNOW_OS_IMAGES\disk-busybox-HDTOUT.img
+@shell.FwModel mp1 xtiss
+@shell.FwModel mp5 xtiss
+@cmos.settime 1 1 1 7 1 1 105
+@shell.SetLogFileEnabled 1
+@shell.SetErrorLogFileEnabled 1
+@isb.IOLog 0
+@# continue booting
+@shell.go
+

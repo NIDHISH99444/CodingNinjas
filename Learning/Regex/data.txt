@@ -1,0 +1,22 @@
+222.555.2222
+522-555-2222
+222--554--3241
+666.666.6666
+666*666*6666
+nidhish
+SINGHAL
+cat
+mat
+tat
+bat
+Mr. Schafer
+Mr Smith
+Ms Davis
+Mrs. Robinson
+Mr. T
+emails = '''
+CoreyMSchafer@gmail.com
+corey.schafer@university.edu
+corey-321-schafer@my-work.net
+ha haha
+'''

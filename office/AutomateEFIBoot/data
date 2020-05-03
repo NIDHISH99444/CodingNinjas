@@ -1,0 +1,4 @@
+shell.open C:\SimNow\aransas_mr_ff3_family17h.bsd
+memdevice:0.InitFile D:\MERO_bios\MaunaExtUDK-16MB-0032-SimNow.FD
+shell.SetLogFile D:\MERO_bios\SimNow_MR-log-20200426_1539-SimNow.txt
+nvmedrive:0.SetImage D:\MERO_bios\win10_efi.hdd

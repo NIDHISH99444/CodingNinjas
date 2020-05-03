@@ -1,0 +1,41 @@
+ # BSD file
+shell.open C:\SimNow\aransas_mr_ff3_family17h.bsd
+ # W25Q128
+MemDevice:0.FlashPart 13
+ # BIOS file
+memdevice:0.InitFile
+ # Set log file
+shell.SetLogFileEnabled 1
+shell.SetLogFile
+ # Log messages directly to console
+shell.SetLogConsoleEnabled 1
+ # PSP Log
+shell.AddDevice "Simulation Util"
+simutils.CharPrint enable 0x4FFFC
+ # ABL Log
+#axiclient:0.SetRegister      cru 0x3010A48 0xc001c0de
+#axiclient:0.SetRegisterReset cru 0x3010A48 0xc001c0de
+ # Special required for Model
+fuse.set USE_4K_ROOT_KEY 1
+fuse.set DISABLE_PROTO_TKEK 0x1
+fuse.set DISABLE_USB_RECOVERY_BOOT 1
+ # Set Monitor Resolution
+mmx:0.SetResolution 1024 768 DVI0
+ # Virtual Disk Image
+#nvmedrive:0.SetImage
+ # reset
+shell.reset
+ # Temporary WORKAROUNDs in Register UmcCfgEco
+ #   BIT19 - Skip loading PMU FW
+cf.write 0x501ec 0x0080000
+ # Temporary WORKAROUND for Early USB Init be enabled in Register MP1_SEC_SCRATCH1
+ #   BIT04 - PMFW_FASTSIM_FEATURE_SKIP_PSP_HANDSHAKES
+cf.write 0x3A000E8 0x10
+ # Temporary SETTINGs in Register MP0_PUB_SCRATCH0
+ #   BIT31 - SimNow
+ #   BIT01 - Disable FMR
+ #   BIT00 - Loading CVIP and FMR
+axiclient:0.SetRegister      cru 0x3010058 0x80000000
+axiclient:0.SetRegisterReset cru 0x3010058 0x80000000
+ # go
+shell.go

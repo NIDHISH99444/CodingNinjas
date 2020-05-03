@@ -19,9 +19,6 @@ class Graph:
                     visited[i]=True
                     queue.append(i)
 
-
-
-
 g=Graph()
 g.addEdge(0, 1)
 g.addEdge(0, 2)
